@@ -1,0 +1,931 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hyderabad Crispy Samosa | Best Samosa in Dilsukhnagar, Hyderabad</title>
+<meta name="description" content="Order fresh & crispy samosas online in Dilsukhnagar, Hyderabad. Aloo, Paneer, Chicken, Pizza, Noodles & Cheese Burst Samosas. Fast delivery. Order now!">
+<meta name="keywords" content="best samosa in Dilsukhnagar, Hyderabad samosa delivery, crispy samosa near me, online samosa order Hyderabad, samosa shop Dilsukhnagar">
+<meta property="og:title" content="Hyderabad Crispy Samosa - Best Samosa in Dilsukhnagar">
+<meta property="og:description" content="Fresh & Crispy Samosas Delivered To Your Home. Order online now!">
+<meta property="og:type" content="restaurant">
+<link rel="canonical" href="https://hyderabadcrispysamosa.com">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Restaurant",
+  "name": "Hyderabad Crispy Samosa",
+  "address": {"@type": "PostalAddress", "streetAddress": "Dilsukhnagar", "addressLocality": "Hyderabad", "addressRegion": "Telangana", "postalCode": "500036", "addressCountry": "IN"},
+  "servesCuisine": "Indian Street Food",
+  "priceRange": "₹",
+  "telephone": "+91-9876543210",
+  "openingHours": "Mo-Su 09:00-22:00"
+}
+</script>
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;600;700;800;900&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root {
+  --saffron: #FF6B00;
+  --turmeric: #FFB300;
+  --chili: #E53935;
+  --cream: #FFF8F0;
+  --dark: #1A0A00;
+  --card-bg: #FFFFFF;
+  --text: #2D1B00;
+  --muted: #7A5C3A;
+  --green: #2E7D32;
+  --shadow: 0 8px 32px rgba(255,107,0,0.15);
+}
+[data-theme="dark"] {
+  --cream: #1A0A00;
+  --card-bg: #2D1500;
+  --text: #FFF8F0;
+  --muted: #D4A77A;
+  --shadow: 0 8px 32px rgba(255,107,0,0.3);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'Poppins',sans-serif;background:var(--cream);color:var(--text);transition:background 0.3s,color 0.3s;overflow-x:hidden}
+
+/* LOADER */
+#loader{position:fixed;inset:0;background:var(--dark);display:flex;flex-direction:column;align-items:center;justify-content:center;z-index:9999;transition:opacity 0.5s}
+#loader.hide{opacity:0;pointer-events:none}
+.loader-samosa{font-size:80px;animation:spin 1s linear infinite}
+.loader-text{color:var(--turmeric);font-family:'Baloo 2',sans-serif;font-size:22px;margin-top:16px}
+@keyframes spin{0%{transform:rotate(0deg)}100%{transform:rotate(360deg)}}
+
+/* NAV */
+nav{position:sticky;top:0;z-index:100;background:rgba(26,10,0,0.95);backdrop-filter:blur(12px);padding:12px 20px;display:flex;align-items:center;justify-content:space-between;border-bottom:2px solid var(--saffron)}
+.logo{font-family:'Baloo 2',sans-serif;font-size:22px;font-weight:900;color:var(--turmeric);display:flex;align-items:center;gap:8px}
+.logo span{color:var(--saffron)}
+.nav-right{display:flex;align-items:center;gap:12px}
+.theme-btn,.cart-btn{background:none;border:none;cursor:pointer;font-size:22px;transition:transform 0.2s}
+.theme-btn:hover,.cart-btn:hover{transform:scale(1.2)}
+.cart-btn{position:relative}
+.cart-count{position:absolute;top:-6px;right:-6px;background:var(--chili);color:#fff;border-radius:50%;width:18px;height:18px;font-size:11px;display:flex;align-items:center;justify-content:center;font-weight:700}
+
+/* HERO */
+.hero{min-height:92vh;background:linear-gradient(135deg,#1A0A00 0%,#3D1500 40%,#7A2D00 100%);position:relative;overflow:hidden;display:flex;align-items:center;padding:40px 20px}
+.hero::before{content:'';position:absolute;inset:0;background:url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23FF6B00' fill-opacity='0.06'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")}
+.hero-content{flex:1;max-width:560px;z-index:2}
+.hero-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(255,179,0,0.15);border:1px solid var(--turmeric);border-radius:50px;padding:6px 16px;color:var(--turmeric);font-size:13px;font-weight:600;margin-bottom:20px;animation:fadeUp 0.6s ease both}
+.hero h1{font-family:'Baloo 2',sans-serif;font-size:clamp(32px,7vw,56px);font-weight:900;color:#fff;line-height:1.1;margin-bottom:16px;animation:fadeUp 0.7s ease 0.1s both}
+.hero h1 span{color:var(--turmeric)}
+.hero p{color:rgba(255,248,240,0.8);font-size:17px;margin-bottom:32px;animation:fadeUp 0.7s ease 0.2s both}
+.hero-btns{display:flex;gap:14px;flex-wrap:wrap;animation:fadeUp 0.7s ease 0.3s both}
+.btn-primary{background:linear-gradient(135deg,var(--saffron),var(--chili));color:#fff;border:none;padding:14px 28px;border-radius:50px;font-size:16px;font-weight:700;cursor:pointer;display:flex;align-items:center;gap:8px;transition:transform 0.2s,box-shadow 0.2s;box-shadow:0 4px 20px rgba(255,107,0,0.4)}
+.btn-primary:hover{transform:translateY(-2px);box-shadow:0 8px 30px rgba(255,107,0,0.6)}
+.btn-secondary{background:rgba(255,255,255,0.1);color:#fff;border:2px solid rgba(255,255,255,0.3);padding:14px 28px;border-radius:50px;font-size:16px;font-weight:600;cursor:pointer;transition:all 0.2s;backdrop-filter:blur(8px)}
+.btn-secondary:hover{background:rgba(255,255,255,0.2);border-color:#fff}
+.hero-visual{flex:1;display:flex;justify-content:center;align-items:center;z-index:2}
+.samosa-emoji-hero{font-size:clamp(120px,20vw,200px);animation:float 3s ease-in-out infinite;filter:drop-shadow(0 20px 40px rgba(255,107,0,0.5))}
+@keyframes float{0%,100%{transform:translateY(0) rotate(-5deg)}50%{transform:translateY(-20px) rotate(5deg)}}
+@keyframes fadeUp{from{opacity:0;transform:translateY(30px)}to{opacity:1;transform:translateY(0)}}
+
+/* STATS */
+.stats{background:linear-gradient(135deg,var(--saffron),var(--chili));padding:24px 20px}
+.stats-grid{max-width:900px;margin:0 auto;display:grid;grid-template-columns:repeat(3,1fr);gap:16px;text-align:center}
+.stat-item{color:#fff}
+.stat-num{font-family:'Baloo 2',sans-serif;font-size:32px;font-weight:900}
+.stat-label{font-size:13px;opacity:0.9}
+
+/* SECTIONS */
+section{padding:60px 20px}
+.section-header{text-align:center;margin-bottom:40px}
+.section-tag{display:inline-block;background:rgba(255,107,0,0.1);color:var(--saffron);border-radius:50px;padding:4px 16px;font-size:13px;font-weight:600;margin-bottom:12px;border:1px solid rgba(255,107,0,0.3)}
+.section-title{font-family:'Baloo 2',sans-serif;font-size:clamp(26px,5vw,38px);font-weight:800;color:var(--text)}
+.section-title span{color:var(--saffron)}
+.section-sub{color:var(--muted);margin-top:8px;font-size:15px}
+
+/* MENU */
+.menu-grid{max-width:1000px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:20px}
+.menu-card{background:var(--card-bg);border-radius:20px;overflow:hidden;box-shadow:var(--shadow);transition:transform 0.3s,box-shadow 0.3s;position:relative;border:1px solid rgba(255,107,0,0.1)}
+.menu-card:hover{transform:translateY(-6px);box-shadow:0 16px 48px rgba(255,107,0,0.25)}
+.menu-card-img{background:linear-gradient(135deg,#FFE0B2,#FFCC02);height:160px;display:flex;align-items:center;justify-content:center;font-size:80px;position:relative}
+.menu-badge{position:absolute;top:12px;right:12px;background:var(--chili);color:#fff;border-radius:50px;padding:3px 10px;font-size:11px;font-weight:700}
+.menu-badge.bestseller{background:var(--green)}
+.menu-body{padding:16px}
+.menu-name{font-family:'Baloo 2',sans-serif;font-size:20px;font-weight:700;color:var(--text)}
+.menu-desc{color:var(--muted);font-size:13px;margin:4px 0 12px}
+.menu-footer{display:flex;align-items:center;justify-content:space-between}
+.menu-price{font-family:'Baloo 2',sans-serif;font-size:22px;font-weight:800;color:var(--saffron)}
+.menu-actions{display:flex;gap:8px}
+.add-cart-btn,.buy-btn{border:none;cursor:pointer;border-radius:50px;font-weight:700;font-size:13px;transition:all 0.2s}
+.add-cart-btn{background:rgba(255,107,0,0.1);color:var(--saffron);padding:8px 14px;border:1px solid rgba(255,107,0,0.3)}
+.add-cart-btn:hover{background:var(--saffron);color:#fff}
+.buy-btn{background:linear-gradient(135deg,var(--saffron),var(--chili));color:#fff;padding:8px 14px}
+.buy-btn:hover{opacity:0.9;transform:scale(1.04)}
+
+/* DELIVERY SECTION */
+.delivery-section{background:linear-gradient(135deg,#1A0A00,#3D1500);color:#fff}
+.delivery-grid{max-width:900px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:20px}
+.delivery-card{background:rgba(255,255,255,0.06);border:1px solid rgba(255,179,0,0.2);border-radius:16px;padding:24px;text-align:center;transition:all 0.3s}
+.delivery-card:hover{background:rgba(255,179,0,0.1);transform:translateY(-4px)}
+.delivery-icon{font-size:44px;margin-bottom:12px}
+.delivery-title{font-family:'Baloo 2',sans-serif;font-size:18px;font-weight:700;color:var(--turmeric)}
+.delivery-desc{font-size:13px;color:rgba(255,248,240,0.7);margin-top:6px}
+
+/* REVIEWS */
+.reviews-grid{max-width:1000px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:20px}
+.review-card{background:var(--card-bg);border-radius:20px;padding:24px;box-shadow:var(--shadow);border:1px solid rgba(255,107,0,0.08);transition:transform 0.3s}
+.review-card:hover{transform:translateY(-4px)}
+.review-stars{color:var(--turmeric);font-size:18px;margin-bottom:10px}
+.review-text{color:var(--muted);font-size:14px;line-height:1.6;font-style:italic}
+.review-author{display:flex;align-items:center;gap:12px;margin-top:16px}
+.review-avatar{width:40px;height:40px;border-radius:50%;background:linear-gradient(135deg,var(--saffron),var(--chili));display:flex;align-items:center;justify-content:center;color:#fff;font-weight:700;font-size:16px}
+.review-name{font-weight:600;font-size:14px}
+.review-loc{font-size:12px;color:var(--muted)}
+
+/* MAP SECTION */
+.map-section{background:var(--cream)}
+.map-wrapper{max-width:900px;margin:0 auto;border-radius:20px;overflow:hidden;box-shadow:var(--shadow);border:3px solid var(--saffron)}
+.map-wrapper iframe{width:100%;height:350px;border:none;display:block}
+.contact-info{max-width:900px;margin:24px auto 0;display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:16px}
+.contact-card{background:var(--card-bg);border-radius:16px;padding:20px;text-align:center;box-shadow:var(--shadow);border:1px solid rgba(255,107,0,0.1)}
+.contact-icon{font-size:32px;margin-bottom:8px}
+.contact-label{font-size:12px;color:var(--muted);font-weight:500}
+.contact-value{font-weight:700;color:var(--text);font-size:15px;margin-top:4px}
+
+/* CART SIDEBAR */
+.cart-overlay{position:fixed;inset:0;background:rgba(0,0,0,0.6);z-index:500;opacity:0;pointer-events:none;transition:opacity 0.3s}
+.cart-overlay.open{opacity:1;pointer-events:all}
+.cart-sidebar{position:fixed;right:-100%;top:0;height:100%;width:min(380px,100%);background:var(--card-bg);z-index:501;transition:right 0.3s;display:flex;flex-direction:column;box-shadow:-8px 0 32px rgba(0,0,0,0.3)}
+.cart-sidebar.open{right:0}
+.cart-header{padding:20px;background:linear-gradient(135deg,var(--saffron),var(--chili));color:#fff;display:flex;align-items:center;justify-content:space-between}
+.cart-header h3{font-family:'Baloo 2',sans-serif;font-size:22px;font-weight:800}
+.close-cart{background:none;border:none;color:#fff;font-size:24px;cursor:pointer}
+.cart-items{flex:1;overflow-y:auto;padding:16px}
+.cart-empty{text-align:center;padding:60px 20px;color:var(--muted)}
+.cart-empty-emoji{font-size:60px;display:block;margin-bottom:16px}
+.cart-item{display:flex;align-items:center;gap:12px;padding:14px 0;border-bottom:1px solid rgba(255,107,0,0.1)}
+.cart-item-emoji{font-size:36px}
+.cart-item-info{flex:1}
+.cart-item-name{font-weight:600;font-size:15px}
+.cart-item-price{color:var(--saffron);font-weight:700;font-size:14px}
+.qty-controls{display:flex;align-items:center;gap:8px}
+.qty-btn{width:28px;height:28px;border-radius:50%;border:2px solid var(--saffron);background:none;color:var(--saffron);font-size:18px;cursor:pointer;display:flex;align-items:center;justify-content:center;font-weight:700;transition:all 0.2s}
+.qty-btn:hover{background:var(--saffron);color:#fff}
+.qty-num{font-weight:700;min-width:20px;text-align:center}
+.cart-footer{padding:20px;border-top:1px solid rgba(255,107,0,0.15)}
+.cart-total{display:flex;justify-content:space-between;align-items:center;margin-bottom:16px;font-size:18px;font-weight:700}
+.cart-total span{color:var(--saffron);font-family:'Baloo 2',sans-serif;font-size:24px}
+.checkout-btn{width:100%;background:linear-gradient(135deg,var(--saffron),var(--chili));color:#fff;border:none;padding:16px;border-radius:50px;font-size:17px;font-weight:700;cursor:pointer;transition:opacity 0.2s}
+.checkout-btn:hover{opacity:0.9}
+
+/* MODAL */
+.modal-overlay{position:fixed;inset:0;background:rgba(0,0,0,0.7);z-index:600;opacity:0;pointer-events:none;transition:opacity 0.3s;display:flex;align-items:center;justify-content:center;padding:16px}
+.modal-overlay.open{opacity:1;pointer-events:all}
+.modal{background:var(--card-bg);border-radius:24px;width:min(480px,100%);max-height:90vh;overflow-y:auto;box-shadow:0 24px 80px rgba(0,0,0,0.4)}
+.modal-header{padding:24px;background:linear-gradient(135deg,var(--saffron),var(--chili));border-radius:24px 24px 0 0;color:#fff;position:relative}
+.modal-header h3{font-family:'Baloo 2',sans-serif;font-size:24px;font-weight:800}
+.modal-close{position:absolute;top:16px;right:16px;background:rgba(255,255,255,0.2);border:none;color:#fff;width:32px;height:32px;border-radius:50%;font-size:18px;cursor:pointer;display:flex;align-items:center;justify-content:center}
+.modal-body{padding:24px}
+.tab-btns{display:flex;gap:8px;margin-bottom:24px}
+.tab-btn{flex:1;padding:10px;border:2px solid rgba(255,107,0,0.3);background:none;border-radius:12px;color:var(--text);font-weight:600;cursor:pointer;transition:all 0.2s}
+.tab-btn.active{background:var(--saffron);color:#fff;border-color:var(--saffron)}
+.form-group{margin-bottom:16px}
+.form-group label{display:block;font-size:13px;font-weight:600;color:var(--muted);margin-bottom:6px}
+.form-group input,.form-group select,.form-group textarea{width:100%;padding:12px 16px;border:2px solid rgba(255,107,0,0.2);border-radius:12px;background:var(--cream);color:var(--text);font-size:15px;font-family:'Poppins',sans-serif;transition:border-color 0.2s;outline:none}
+.form-group input:focus,.form-group select:focus,.form-group textarea:focus{border-color:var(--saffron)}
+.payment-options{display:flex;gap:12px;margin-bottom:20px}
+.payment-opt{flex:1;padding:14px;border:2px solid rgba(255,107,0,0.2);border-radius:14px;text-align:center;cursor:pointer;transition:all 0.2s}
+.payment-opt.selected{border-color:var(--saffron);background:rgba(255,107,0,0.08)}
+.payment-opt-icon{font-size:28px;margin-bottom:6px}
+.payment-opt-label{font-size:13px;font-weight:600}
+.submit-order-btn{width:100%;background:linear-gradient(135deg,var(--saffron),var(--chili));color:#fff;border:none;padding:16px;border-radius:50px;font-size:17px;font-weight:700;cursor:pointer;transition:all 0.2s}
+.submit-order-btn:hover{opacity:0.9;transform:translateY(-1px)}
+
+/* ORDER SUCCESS */
+.order-success{text-align:center;padding:40px 24px}
+.success-emoji{font-size:80px;animation:bounce 0.8s ease}
+@keyframes bounce{0%{transform:scale(0)}60%{transform:scale(1.2)}100%{transform:scale(1)}}
+.success-title{font-family:'Baloo 2',sans-serif;font-size:28px;font-weight:800;color:var(--green);margin:16px 0 8px}
+.order-id{background:rgba(46,125,50,0.1);border:1px solid rgba(46,125,50,0.3);border-radius:12px;padding:12px;color:var(--green);font-weight:700;margin:16px 0}
+.track-steps{text-align:left;margin:20px 0}
+.track-step{display:flex;align-items:center;gap:12px;padding:12px 0;border-bottom:1px dashed rgba(255,107,0,0.2)}
+.track-step-icon{width:36px;height:36px;border-radius:50%;background:rgba(255,107,0,0.1);display:flex;align-items:center;justify-content:center;font-size:18px;flex-shrink:0}
+.track-step.active .track-step-icon{background:var(--saffron)}
+.track-step-info{font-size:14px}
+.track-step-title{font-weight:600}
+.track-step-desc{color:var(--muted);font-size:12px}
+
+/* ADMIN PANEL */
+.admin-btn{position:fixed;bottom:80px;left:16px;background:linear-gradient(135deg,#1A237E,#283593);color:#fff;border:none;padding:12px 20px;border-radius:50px;font-size:13px;font-weight:700;cursor:pointer;z-index:200;display:flex;align-items:center;gap:6px;box-shadow:0 4px 16px rgba(0,0,0,0.3)}
+.admin-panel{position:fixed;inset:0;background:var(--card-bg);z-index:700;overflow-y:auto;transform:translateX(-100%);transition:transform 0.3s}
+.admin-panel.open{transform:translateX(0)}
+.admin-header{background:linear-gradient(135deg,#1A237E,#4527A0);color:#fff;padding:20px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:1}
+.admin-header h2{font-family:'Baloo 2',sans-serif;font-size:24px;font-weight:800}
+.admin-nav{display:flex;overflow-x:auto;gap:8px;padding:12px 16px;background:var(--card-bg);border-bottom:1px solid rgba(0,0,0,0.1)}
+.admin-tab{padding:8px 16px;border-radius:50px;border:2px solid rgba(26,35,126,0.2);background:none;color:var(--text);font-size:13px;font-weight:600;cursor:pointer;white-space:nowrap;transition:all 0.2s}
+.admin-tab.active{background:#1A237E;color:#fff;border-color:#1A237E}
+.admin-content{padding:20px}
+.admin-section{display:none}
+.admin-section.active{display:block}
+.stat-cards{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin-bottom:20px}
+.stat-card{background:linear-gradient(135deg,var(--saffron),var(--chili));border-radius:16px;padding:16px;color:#fff}
+.stat-card-num{font-family:'Baloo 2',sans-serif;font-size:28px;font-weight:900}
+.stat-card-label{font-size:12px;opacity:0.85}
+.order-list{display:flex;flex-direction:column;gap:12px}
+.order-item{background:var(--cream);border-radius:14px;padding:16px;border:1px solid rgba(255,107,0,0.15)}
+.order-item-header{display:flex;justify-content:space-between;align-items:center;margin-bottom:8px}
+.order-num{font-weight:700;font-size:15px}
+.order-status{padding:4px 12px;border-radius:50px;font-size:12px;font-weight:700}
+.status-pending{background:#FFF3E0;color:#E65100}
+.status-preparing{background:#E3F2FD;color:#1565C0}
+.status-delivered{background:#E8F5E9;color:#2E7D32}
+.assign-btn{background:var(--saffron);color:#fff;border:none;padding:6px 14px;border-radius:50px;font-size:13px;cursor:pointer;font-weight:600}
+.delivery-boy-list{display:flex;flex-direction:column;gap:10px}
+.db-card{background:var(--cream);border-radius:14px;padding:14px;border:1px solid rgba(255,107,0,0.15);display:flex;align-items:center;gap:12px}
+.db-avatar{width:44px;height:44px;border-radius:50%;background:linear-gradient(135deg,var(--turmeric),var(--saffron));display:flex;align-items:center;justify-content:center;color:#fff;font-size:20px;flex-shrink:0}
+.db-info{flex:1}
+.db-name{font-weight:700}
+.db-status{font-size:12px;color:var(--muted)}
+.db-available{color:var(--green)}
+
+/* DELIVERY BOY PANEL */
+.db-panel{position:fixed;inset:0;background:var(--card-bg);z-index:700;overflow-y:auto;transform:translateY(100%);transition:transform 0.3s}
+.db-panel.open{transform:translateY(0)}
+.db-header{background:linear-gradient(135deg,#004D40,#00695C);color:#fff;padding:20px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:1}
+.db-header h2{font-family:'Baloo 2',sans-serif;font-size:22px;font-weight:800}
+.db-content{padding:20px}
+.db-order-card{background:linear-gradient(135deg,var(--saffron),var(--chili));border-radius:20px;padding:20px;color:#fff;margin-bottom:16px}
+.db-order-actions{display:flex;gap:10px;margin-top:16px}
+.accept-btn{flex:1;background:#fff;color:var(--green);border:none;padding:12px;border-radius:50px;font-weight:700;cursor:pointer}
+.reject-btn{flex:1;background:rgba(255,255,255,0.2);color:#fff;border:2px solid rgba(255,255,255,0.5);padding:12px;border-radius:50px;font-weight:700;cursor:pointer}
+.earnings-card{background:var(--cream);border-radius:16px;padding:20px;margin-bottom:12px;border:1px solid rgba(255,107,0,0.15)}
+
+/* STICKY CART BAR */
+.sticky-cart{position:fixed;bottom:0;left:0;right:0;background:linear-gradient(135deg,var(--saffron),var(--chili));padding:14px 20px;display:flex;align-items:center;justify-content:space-between;z-index:200;transform:translateY(100%);transition:transform 0.3s;box-shadow:0 -4px 20px rgba(255,107,0,0.4)}
+.sticky-cart.visible{transform:translateY(0)}
+.sticky-cart-info{color:#fff}
+.sticky-cart-count{font-size:13px;opacity:0.9}
+.sticky-cart-total{font-family:'Baloo 2',sans-serif;font-size:20px;font-weight:800}
+.sticky-cart-btn{background:#fff;color:var(--saffron);border:none;padding:12px 24px;border-radius:50px;font-weight:700;font-size:15px;cursor:pointer}
+
+/* WHATSAPP */
+.whatsapp-float{position:fixed;bottom:80px;right:16px;z-index:300}
+.whatsapp-btn{background:#25D366;color:#fff;border:none;border-radius:50px;padding:14px 20px;font-size:15px;font-weight:700;cursor:pointer;display:flex;align-items:center;gap:8px;box-shadow:0 4px 20px rgba(37,211,102,0.4);animation:pulse 2s infinite}
+@keyframes pulse{0%,100%{box-shadow:0 4px 20px rgba(37,211,102,0.4)}50%{box-shadow:0 4px 40px rgba(37,211,102,0.7)}}
+
+/* TOAST */
+.toast{position:fixed;top:80px;right:16px;background:#333;color:#fff;padding:12px 20px;border-radius:12px;font-size:14px;font-weight:500;z-index:800;transform:translateX(200%);transition:transform 0.3s;max-width:280px}
+.toast.show{transform:translateX(0)}
+.toast.success{background:var(--green)}
+.toast.info{background:var(--saffron)}
+
+/* FOOTER */
+footer{background:#0D0500;color:rgba(255,248,240,0.7);padding:40px 20px 100px;text-align:center}
+.footer-logo{font-family:'Baloo 2',sans-serif;font-size:28px;font-weight:900;color:var(--turmeric);margin-bottom:8px}
+.footer-links{display:flex;justify-content:center;gap:20px;flex-wrap:wrap;margin:16px 0;font-size:14px}
+.footer-links a{color:rgba(255,248,240,0.6);text-decoration:none;transition:color 0.2s}
+.footer-links a:hover{color:var(--turmeric)}
+.footer-bottom{margin-top:20px;font-size:13px;opacity:0.5}
+
+/* UTILS */
+.max-w{max-width:1100px;margin:0 auto}
+@media(max-width:600px){
+  .hero{flex-direction:column;text-align:center;padding-top:60px}
+  .hero-visual{margin-top:20px}
+  .hero-btns{justify-content:center}
+  .stats-grid{grid-template-columns:repeat(3,1fr);gap:8px}
+  .stat-num{font-size:22px}
+}
+</style>
+</head>
+<body>
+
+<!-- LOADER -->
+<div id="loader">
+  <div class="loader-samosa">🥟</div>
+  <div class="loader-text">Heating up your samosas...</div>
+</div>
+
+<!-- TOAST -->
+<div class="toast" id="toast"></div>
+
+<!-- NAV -->
+<nav>
+  <div class="logo">🥟 <span>Hyderabad</span>&nbsp;Crispy Samosa</div>
+  <div class="nav-right">
+    <button class="theme-btn" onclick="toggleTheme()" title="Toggle Dark Mode">🌙</button>
+    <button class="cart-btn" onclick="openCart()">🛒<span class="cart-count" id="cartCount">0</span></button>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-content">
+    <div class="hero-badge">🔥 HOT & FRESH • DILSUKHNAGAR, HYD</div>
+    <h1>Fresh & Crispy<br><span>Samosas Delivered</span><br>To Your Home!</h1>
+    <p>Hyderabad's crispiest samosas with authentic spices. Order in 2 mins, delivered hot in 30 mins!</p>
+    <div class="hero-btns">
+      <button class="btn-primary" onclick="scrollToMenu()">🛒 Order Now</button>
+      <button class="btn-secondary" onclick="openWhatsApp()">📱 WhatsApp Order</button>
+    </div>
+  </div>
+  <div class="hero-visual">
+    <div class="samosa-emoji-hero">🥟</div>
+  </div>
+</section>
+
+<!-- STATS -->
+<div class="stats">
+  <div class="stats-grid">
+    <div class="stat-item"><div class="stat-num">10K+</div><div class="stat-label">Happy Customers</div></div>
+    <div class="stat-item"><div class="stat-num">30 Min</div><div class="stat-label">Avg Delivery</div></div>
+    <div class="stat-item"><div class="stat-num">4.9 ⭐</div><div class="stat-label">Rating</div></div>
+  </div>
+</div>
+
+<!-- MENU -->
+<section id="menu">
+  <div class="section-header">
+    <div class="section-tag">🥟 OUR MENU</div>
+    <h2 class="section-title">Crispy <span>Samosa Varieties</span></h2>
+    <p class="section-sub">Made fresh every hour with premium ingredients</p>
+  </div>
+  <div class="menu-grid" id="menuGrid"></div>
+</section>
+
+<!-- LIVE DELIVERY -->
+<section class="delivery-section">
+  <div class="section-header">
+    <div class="section-tag" style="background:rgba(255,179,0,0.15);color:var(--turmeric);border-color:rgba(255,179,0,0.3)">🚴 LIVE DELIVERY</div>
+    <h2 class="section-title" style="color:#fff">How Your <span>Samosa Arrives</span></h2>
+  </div>
+  <div class="delivery-grid">
+    <div class="delivery-card">
+      <div class="delivery-icon">📱</div>
+      <div class="delivery-title">Place Order</div>
+      <div class="delivery-desc">Order via app or WhatsApp in seconds</div>
+    </div>
+    <div class="delivery-card">
+      <div class="delivery-icon">👨‍🍳</div>
+      <div class="delivery-title">We Prepare</div>
+      <div class="delivery-desc">Fresh samosas fried just for you</div>
+    </div>
+    <div class="delivery-card">
+      <div class="delivery-icon">🚴</div>
+      <div class="delivery-title">Picked Up</div>
+      <div class="delivery-desc">Delivery boy assigned instantly</div>
+    </div>
+    <div class="delivery-card">
+      <div class="delivery-icon">🏠</div>
+      <div class="delivery-title">At Your Door</div>
+      <div class="delivery-desc">Hot & crispy in 30 minutes!</div>
+    </div>
+  </div>
+</section>
+
+<!-- REVIEWS -->
+<section>
+  <div class="section-header">
+    <div class="section-tag">⭐ REVIEWS</div>
+    <h2 class="section-title">What Customers <span>Say</span></h2>
+  </div>
+  <div class="reviews-grid">
+    <div class="review-card">
+      <div class="review-stars">★★★★★</div>
+      <div class="review-text">"Best samosas I've ever had in Hyderabad! The cheese burst one is absolutely unreal. Ordering every weekend now!"</div>
+      <div class="review-author"><div class="review-avatar">R</div><div><div class="review-name">Rahul Sharma</div><div class="review-loc">📍 Dilsukhnagar</div></div></div>
+    </div>
+    <div class="review-card">
+      <div class="review-stars">★★★★★</div>
+      <div class="review-text">"Paneer samosa is too good yaar! Delivery was super fast, came hot and crispy. Will definitely order again!"</div>
+      <div class="review-author"><div class="review-avatar">P</div><div><div class="review-name">Priya Reddy</div><div class="review-loc">📍 Kothapet</div></div></div>
+    </div>
+    <div class="review-card">
+      <div class="review-stars">★★★★★</div>
+      <div class="review-text">"Pizza samosa is unique concept and tastes amazing! Great for evenings with tea. Best evening snack in the area!"</div>
+      <div class="review-author"><div class="review-avatar">M</div><div><div class="review-name">Mohammed Ali</div><div class="review-loc">📍 LB Nagar</div></div></div>
+    </div>
+    <div class="review-card">
+      <div class="review-stars">★★★★★</div>
+      <div class="review-text">"Ordered 20 samosas for office party — everyone loved them! The chicken samosas finished first. Highly recommend!"</div>
+      <div class="review-author"><div class="review-avatar">S</div><div><div class="review-name">Swetha Nair</div><div class="review-loc">📍 Vanastalipuram</div></div></div>
+    </div>
+    <div class="review-card">
+      <div class="review-stars">★★★★★</div>
+      <div class="review-text">"WhatsApp ordering is so convenient! Message them, 30 mins later samosas at my door. Spices are perfect, not too oily!"</div>
+      <div class="review-author"><div class="review-avatar">A</div><div><div class="review-name">Arjun Rao</div><div class="review-loc">📍 Saidabad</div></div></div>
+    </div>
+    <div class="review-card">
+      <div class="review-stars">★★★★★</div>
+      <div class="review-text">"Kids love noodles samosa! It's their favourite snack. Fresh, delicious, great price. This shop deserves 10 stars!"</div>
+      <div class="review-author"><div class="review-avatar">D</div><div><div class="review-name">Deepika Joshi</div><div class="review-loc">📍 Malakpet</div></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- MAP -->
+<section class="map-section">
+  <div class="section-header">
+    <div class="section-tag">📍 FIND US</div>
+    <h2 class="section-title">We're at <span>Dilsukhnagar</span></h2>
+  </div>
+  <div class="max-w">
+    <div class="map-wrapper">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d30448.068459741987!2d78.5157!3d17.3688!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcba067fa6a1b61%3A0xe2e3f05f87a73e46!2sDilsukhnagar%2C%20Hyderabad%2C%20Telangana!5e0!3m2!1sen!2sin!4v1700000000000" allowfullscreen loading="lazy"></iframe>
+    </div>
+    <div class="contact-info">
+      <div class="contact-card">
+        <div class="contact-icon">📞</div>
+        <div class="contact-label">Call / WhatsApp</div>
+        <div class="contact-value">+91 98765 43210</div>
+      </div>
+      <div class="contact-card">
+        <div class="contact-icon">📍</div>
+        <div class="contact-label">Location</div>
+        <div class="contact-value">Dilsukhnagar, Hyderabad</div>
+      </div>
+      <div class="contact-card">
+        <div class="contact-icon">🕐</div>
+        <div class="contact-label">Open Hours</div>
+        <div class="contact-value">9 AM – 10 PM Daily</div>
+      </div>
+      <div class="contact-card">
+        <div class="contact-icon">🚴</div>
+        <div class="contact-label">Delivery Area</div>
+        <div class="contact-value">5 km Radius</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-logo">🥟 Hyderabad Crispy Samosa</div>
+  <p style="font-size:14px;margin-bottom:12px">Dilsukhnagar, Hyderabad — Fresh & Crispy Since 2015</p>
+  <div class="footer-links">
+    <a href="#menu">Menu</a>
+    <a href="#" onclick="openCart()">Cart</a>
+    <a href="#" onclick="openWhatsApp()">WhatsApp Order</a>
+    <a href="#" onclick="openAdmin()">Admin</a>
+    <a href="#" onclick="openDeliveryBoy()">Delivery Login</a>
+  </div>
+  <div class="footer-bottom">© 2025 Hyderabad Crispy Samosa. All Rights Reserved. | Best Samosa in Dilsukhnagar | Hyderabad Samosa Delivery</div>
+</footer>
+
+<!-- WHATSAPP FLOAT -->
+<div class="whatsapp-float">
+  <button class="whatsapp-btn" onclick="openWhatsApp()">💬 Order on WhatsApp</button>
+</div>
+
+<!-- ADMIN BTN -->
+<button class="admin-btn" onclick="openAdmin()">⚙️ Admin Panel</button>
+
+<!-- STICKY CART -->
+<div class="sticky-cart" id="stickyCart">
+  <div class="sticky-cart-info">
+    <div class="sticky-cart-count" id="stickyCount">0 items</div>
+    <div class="sticky-cart-total" id="stickyTotal">₹0</div>
+  </div>
+  <button class="sticky-cart-btn" onclick="openCart()">View Cart →</button>
+</div>
+
+<!-- CART SIDEBAR -->
+<div class="cart-overlay" id="cartOverlay" onclick="closeCart()"></div>
+<div class="cart-sidebar" id="cartSidebar">
+  <div class="cart-header">
+    <h3>🛒 Your Cart</h3>
+    <button class="close-cart" onclick="closeCart()">✕</button>
+  </div>
+  <div class="cart-items" id="cartItems"></div>
+  <div class="cart-footer" id="cartFooter" style="display:none">
+    <div class="cart-total">Total: <span id="cartTotal">₹0</span></div>
+    <button class="checkout-btn" onclick="openCheckout()">Proceed to Checkout 🚀</button>
+  </div>
+</div>
+
+<!-- CHECKOUT MODAL -->
+<div class="modal-overlay" id="checkoutModal">
+  <div class="modal">
+    <div class="modal-header">
+      <h3>📦 Place Your Order</h3>
+      <button class="modal-close" onclick="closeCheckout()">✕</button>
+    </div>
+    <div class="modal-body" id="checkoutBody">
+      <div class="tab-btns">
+        <button class="tab-btn active" onclick="switchTab('login')">Login</button>
+        <button class="tab-btn" onclick="switchTab('signup')">Sign Up</button>
+        <button class="tab-btn" onclick="switchTab('guest')">Guest</button>
+      </div>
+      <div id="loginTab">
+        <div class="form-group"><label>Phone Number</label><input type="tel" id="loginPhone" placeholder="+91 98765 43210"></div>
+        <div class="form-group"><label>Password</label><input type="password" id="loginPass" placeholder="Enter password"></div>
+        <button class="submit-order-btn" onclick="doLogin()">Login & Continue →</button>
+      </div>
+      <div id="signupTab" style="display:none">
+        <div class="form-group"><label>Full Name</label><input type="text" id="signupName" placeholder="Your name"></div>
+        <div class="form-group"><label>Phone Number</label><input type="tel" id="signupPhone" placeholder="+91 98765 43210"></div>
+        <div class="form-group"><label>Password</label><input type="password" id="signupPass" placeholder="Create password"></div>
+        <button class="submit-order-btn" onclick="doSignup()">Sign Up & Continue →</button>
+      </div>
+      <div id="guestTab" style="display:none">
+        <div class="form-group"><label>Full Name *</label><input type="text" id="guestName" placeholder="Your name"></div>
+        <div class="form-group"><label>Phone Number *</label><input type="tel" id="guestPhone" placeholder="+91 98765 43210"></div>
+        <div class="form-group"><label>Delivery Address *</label><textarea id="guestAddr" rows="3" placeholder="House no, Street, Area, Landmark"></textarea></div>
+        <div class="form-group"><label>Pincode</label><input type="text" id="guestPin" placeholder="500036"></div>
+        <div style="font-weight:600;margin-bottom:12px">💳 Payment Method</div>
+        <div class="payment-options">
+          <div class="payment-opt selected" onclick="selectPayment(this,'cod')"><div class="payment-opt-icon">💵</div><div class="payment-opt-label">Cash on Delivery</div></div>
+          <div class="payment-opt" onclick="selectPayment(this,'upi')"><div class="payment-opt-icon">📱</div><div class="payment-opt-label">UPI Payment</div></div>
+        </div>
+        <div id="upiSection" style="display:none" class="form-group"><label>UPI ID</label><input type="text" id="upiId" placeholder="yourname@upi"></div>
+        <button class="submit-order-btn" onclick="placeOrder()">🚀 Place Order Now</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ADMIN PANEL -->
+<div class="admin-panel" id="adminPanel">
+  <div class="admin-header">
+    <h2>⚙️ Admin Panel</h2>
+    <button style="background:rgba(255,255,255,0.2);border:none;color:#fff;padding:8px 16px;border-radius:50px;cursor:pointer;font-weight:600" onclick="closeAdmin()">✕ Close</button>
+  </div>
+  <div class="admin-nav">
+    <button class="admin-tab active" onclick="adminTab('dashboard')">📊 Dashboard</button>
+    <button class="admin-tab" onclick="adminTab('orders')">📋 Orders</button>
+    <button class="admin-tab" onclick="adminTab('menu')">🥟 Menu</button>
+    <button class="admin-tab" onclick="adminTab('delivery')">🚴 Delivery</button>
+    <button class="admin-tab" onclick="adminTab('reports')">📈 Reports</button>
+  </div>
+  <div class="admin-content">
+    <!-- DASHBOARD -->
+    <div class="admin-section active" id="admin-dashboard">
+      <h3 style="font-family:'Baloo 2',sans-serif;font-size:20px;margin-bottom:16px">Today's Overview</h3>
+      <div class="stat-cards">
+        <div class="stat-card"><div class="stat-card-num" id="adTotalOrders">24</div><div class="stat-card-label">Total Orders Today</div></div>
+        <div class="stat-card" style="background:linear-gradient(135deg,#2E7D32,#388E3C)"><div class="stat-card-num">₹<span id="adRevenue">1,840</span></div><div class="stat-card-label">Revenue Today</div></div>
+        <div class="stat-card" style="background:linear-gradient(135deg,#1565C0,#1976D2)"><div class="stat-card-num" id="adPending">3</div><div class="stat-card-label">Pending Orders</div></div>
+        <div class="stat-card" style="background:linear-gradient(135deg,#6A1B9A,#7B1FA2)"><div class="stat-card-num" id="adDelivered">21</div><div class="stat-card-label">Delivered Today</div></div>
+      </div>
+      <div style="background:var(--cream);border-radius:14px;padding:16px;border:1px solid rgba(255,107,0,0.15)">
+        <div style="font-weight:700;margin-bottom:12px">🔔 Live Notifications</div>
+        <div id="notifList">
+          <div style="padding:8px 0;border-bottom:1px solid rgba(255,107,0,0.1);font-size:14px">🆕 New order #1024 - Priya R - ₹75</div>
+          <div style="padding:8px 0;border-bottom:1px solid rgba(255,107,0,0.1);font-size:14px">✅ Order #1023 delivered by Ravi</div>
+          <div style="padding:8px 0;font-size:14px">🔥 Peak hours — 3 delivery boys active</div>
+        </div>
+      </div>
+    </div>
+    <!-- ORDERS -->
+    <div class="admin-section" id="admin-orders">
+      <h3 style="font-family:'Baloo 2',sans-serif;font-size:20px;margin-bottom:16px">All Orders</h3>
+      <div class="order-list" id="adminOrderList"></div>
+    </div>
+    <!-- MENU MANAGEMENT -->
+    <div class="admin-section" id="admin-menu">
+      <h3 style="font-family:'Baloo 2',sans-serif;font-size:20px;margin-bottom:16px">Manage Menu</h3>
+      <div id="adminMenuList"></div>
+      <div style="margin-top:20px;background:var(--cream);border-radius:16px;padding:20px;border:1px solid rgba(255,107,0,0.15)">
+        <div style="font-weight:700;margin-bottom:12px">➕ Add New Item</div>
+        <div class="form-group"><label>Item Name</label><input type="text" id="newItemName" placeholder="e.g. Corn Samosa"></div>
+        <div class="form-group"><label>Price (₹)</label><input type="number" id="newItemPrice" placeholder="20"></div>
+        <div class="form-group"><label>Description</label><input type="text" id="newItemDesc" placeholder="Short description"></div>
+        <button class="submit-order-btn" onclick="addMenuItem()" style="padding:12px 24px;border-radius:12px">Add Item</button>
+      </div>
+    </div>
+    <!-- DELIVERY -->
+    <div class="admin-section" id="admin-delivery">
+      <h3 style="font-family:'Baloo 2',sans-serif;font-size:20px;margin-bottom:16px">Delivery Boys</h3>
+      <div class="delivery-boy-list">
+        <div class="db-card"><div class="db-avatar">🏍️</div><div class="db-info"><div class="db-name">Ravi Kumar</div><div class="db-status db-available">● Available — 2.3 km away</div></div><button class="assign-btn">Assign</button></div>
+        <div class="db-card"><div class="db-avatar">🚴</div><div class="db-info"><div class="db-name">Suresh Babu</div><div class="db-status" style="color:var(--saffron)">● On Delivery — ETA 8 min</div></div><button class="assign-btn" disabled style="opacity:0.5">Busy</button></div>
+        <div class="db-card"><div class="db-avatar">🏍️</div><div class="db-info"><div class="db-name">Mahesh Goud</div><div class="db-status db-available">● Available — 1.1 km away</div></div><button class="assign-btn">Assign</button></div>
+        <div class="db-card"><div class="db-avatar">🚴</div><div class="db-info"><div class="db-name">Vinod Rao</div><div class="db-status" style="color:var(--muted)">● Offline</div></div><button class="assign-btn" disabled style="opacity:0.5">Offline</button></div>
+      </div>
+    </div>
+    <!-- REPORTS -->
+    <div class="admin-section" id="admin-reports">
+      <h3 style="font-family:'Baloo 2',sans-serif;font-size:20px;margin-bottom:16px">Daily Sales Report</h3>
+      <div class="stat-cards">
+        <div class="stat-card"><div class="stat-card-num">₹8,420</div><div class="stat-card-label">This Week</div></div>
+        <div class="stat-card" style="background:linear-gradient(135deg,#2E7D32,#388E3C)"><div class="stat-card-num">₹32,150</div><div class="stat-card-label">This Month</div></div>
+      </div>
+      <div style="background:var(--cream);border-radius:14px;padding:16px;border:1px solid rgba(255,107,0,0.15)">
+        <div style="font-weight:700;margin-bottom:12px">📊 Top Selling Items</div>
+        <div id="topSelling"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- DELIVERY BOY PANEL -->
+<div class="db-panel" id="dbPanel">
+  <div class="db-header">
+    <h2>🚴 Delivery Dashboard</h2>
+    <button style="background:rgba(255,255,255,0.2);border:none;color:#fff;padding:8px 16px;border-radius:50px;cursor:pointer;font-weight:600" onclick="closeDeliveryBoy()">✕ Close</button>
+  </div>
+  <div class="db-content">
+    <div class="db-order-card">
+      <div style="font-size:13px;opacity:0.85;margin-bottom:4px">🆕 NEW ORDER ASSIGNED</div>
+      <div style="font-family:'Baloo 2',sans-serif;font-size:22px;font-weight:800">Order #1024</div>
+      <div style="margin-top:10px;font-size:14px;opacity:0.9">📍 Flat 12B, Rainbow Apartments, Dilsukhnagar</div>
+      <div style="margin-top:6px;font-size:14px;opacity:0.9">📞 +91 98765 43210</div>
+      <div style="margin-top:6px;font-size:14px">🥟 3x Aloo Samosa, 2x Paneer Samosa</div>
+      <div style="margin-top:6px;font-weight:700;font-size:16px">💰 ₹85 — Cash on Delivery</div>
+      <div class="db-order-actions">
+        <button class="accept-btn" onclick="acceptDelivery()">✅ Accept</button>
+        <button class="reject-btn" onclick="rejectDelivery()">✕ Reject</button>
+      </div>
+    </div>
+    <div style="font-weight:700;margin-bottom:12px;font-family:'Baloo 2',sans-serif;font-size:18px">💰 My Earnings</div>
+    <div class="earnings-card">
+      <div style="display:flex;justify-content:space-between;align-items:center">
+        <div><div style="font-size:13px;color:var(--muted)">Today's Earnings</div><div style="font-family:'Baloo 2',sans-serif;font-size:28px;font-weight:800;color:var(--saffron)">₹320</div></div>
+        <div style="text-align:right"><div style="font-size:13px;color:var(--muted)">Deliveries</div><div style="font-family:'Baloo 2',sans-serif;font-size:28px;font-weight:800">8</div></div>
+      </div>
+    </div>
+    <div style="font-weight:700;margin-bottom:12px;font-family:'Baloo 2',sans-serif;font-size:18px">📋 Order History</div>
+    <div style="background:var(--cream);border-radius:14px;padding:16px;border:1px solid rgba(255,107,0,0.15)">
+      <div style="display:flex;justify-content:space-between;padding:8px 0;border-bottom:1px dashed rgba(255,107,0,0.2);font-size:14px"><span>Order #1023</span><span style="color:var(--green);font-weight:700">✅ Delivered</span></div>
+      <div style="display:flex;justify-content:space-between;padding:8px 0;border-bottom:1px dashed rgba(255,107,0,0.2);font-size:14px"><span>Order #1022</span><span style="color:var(--green);font-weight:700">✅ Delivered</span></div>
+      <div style="display:flex;justify-content:space-between;padding:8px 0;font-size:14px"><span>Order #1021</span><span style="color:var(--green);font-weight:700">✅ Delivered</span></div>
+    </div>
+  </div>
+</div>
+
+<script>
+// ─── DATA ───────────────────────────────────────────────────────────────────
+const menuItems = [
+  {id:1,name:"Aloo Samosa",desc:"Classic potato & spice filling",price:15,emoji:"🥟",badge:"Bestseller",badgeType:"bestseller"},
+  {id:2,name:"Paneer Samosa",desc:"Creamy cottage cheese & herbs",price:20,emoji:"🧀",badge:"Popular",badgeType:""},
+  {id:3,name:"Chicken Samosa",desc:"Spicy minced chicken filling",price:25,emoji:"🍗",badge:"₹25 for 2 pcs",badgeType:""},
+  {id:4,name:"Pizza Samosa",desc:"Italian meets Indian — fusion magic",price:30,emoji:"🍕",badge:"New",badgeType:""},
+  {id:5,name:"Noodles Samosa",desc:"Desi noodles in crispy shell",price:25,emoji:"🍜",badge:"Trending",badgeType:""},
+  {id:6,name:"Cheese Burst Samosa",desc:"Oozy cheese inside crispy golden shell",price:35,emoji:"🫕",badge:"Must Try",badgeType:""},
+];
+
+let cart = [];
+let selectedPayment = 'cod';
+let orders = [
+  {id:"#1024",customer:"Priya Reddy",items:"3x Aloo, 1x Paneer",total:65,status:"pending",address:"Dilsukhnagar"},
+  {id:"#1023",customer:"Rahul Sharma",items:"2x Chicken, 2x Pizza",total:110,status:"preparing",address:"Kothapet"},
+  {id:"#1022",customer:"Mohammed Ali",items:"5x Aloo Samosa",total:75,status:"delivered",address:"LB Nagar"},
+];
+
+// ─── LOADER ──────────────────────────────────────────────────────────────────
+window.addEventListener('load',()=>{
+  setTimeout(()=>document.getElementById('loader').classList.add('hide'),1500);
+  renderMenu();
+  renderAdminOrders();
+  renderAdminMenu();
+  renderTopSelling();
+});
+
+// ─── THEME ───────────────────────────────────────────────────────────────────
+function toggleTheme(){
+  const isDark=document.documentElement.getAttribute('data-theme')==='dark';
+  document.documentElement.setAttribute('data-theme',isDark?'light':'dark');
+  document.querySelector('.theme-btn').textContent=isDark?'🌙':'☀️';
+}
+
+// ─── MENU ────────────────────────────────────────────────────────────────────
+function renderMenu(){
+  const grid=document.getElementById('menuGrid');
+  grid.innerHTML=menuItems.map(item=>`
+    <div class="menu-card" style="animation:fadeUp 0.5s ease ${item.id*0.1}s both">
+      <div class="menu-card-img">
+        ${item.emoji}
+        ${item.badge?`<div class="menu-badge ${item.badgeType}">${item.badge}</div>`:''}
+      </div>
+      <div class="menu-body">
+        <div class="menu-name">${item.name}</div>
+        <div class="menu-desc">${item.desc}</div>
+        <div class="menu-footer">
+          <div class="menu-price">₹${item.price}</div>
+          <div class="menu-actions">
+            <button class="add-cart-btn" onclick="addToCart(${item.id})">+ Cart</button>
+            <button class="buy-btn" onclick="buyNow(${item.id})">Buy Now</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  `).join('');
+}
+
+// ─── CART ─────────────────────────────────────────────────────────────────────
+function addToCart(id){
+  const item=menuItems.find(i=>i.id===id);
+  const existing=cart.find(i=>i.id===id);
+  if(existing){existing.qty++;}else{cart.push({...item,qty:1});}
+  updateCartUI();
+  showToast(`${item.emoji} ${item.name} added to cart!`,'success');
+}
+function buyNow(id){addToCart(id);openCart();}
+function removeFromCart(id){cart=cart.filter(i=>i.id!==id);updateCartUI();}
+function changeQty(id,delta){
+  const item=cart.find(i=>i.id===id);
+  if(!item)return;
+  item.qty+=delta;
+  if(item.qty<=0)removeFromCart(id);
+  else updateCartUI();
+}
+function getTotal(){return cart.reduce((s,i)=>s+i.price*i.qty,0);}
+function updateCartUI(){
+  const total=getTotal();
+  const count=cart.reduce((s,i)=>s+i.qty,0);
+  document.getElementById('cartCount').textContent=count;
+  // Render cart items
+  const ci=document.getElementById('cartItems');
+  const cf=document.getElementById('cartFooter');
+  if(cart.length===0){
+    ci.innerHTML=`<div class="cart-empty"><span class="cart-empty-emoji">🥟</span><div style="font-weight:700;font-size:18px">Your cart is empty</div><div style="color:var(--muted);margin-top:8px;font-size:14px">Add some crispy samosas!</div></div>`;
+    cf.style.display='none';
+  }else{
+    ci.innerHTML=cart.map(item=>`
+      <div class="cart-item">
+        <div class="cart-item-emoji">${item.emoji}</div>
+        <div class="cart-item-info">
+          <div class="cart-item-name">${item.name}</div>
+          <div class="cart-item-price">₹${item.price} × ${item.qty} = ₹${item.price*item.qty}</div>
+        </div>
+        <div class="qty-controls">
+          <button class="qty-btn" onclick="changeQty(${item.id},-1)">−</button>
+          <span class="qty-num">${item.qty}</span>
+          <button class="qty-btn" onclick="changeQty(${item.id},1)">+</button>
+        </div>
+      </div>
+    `).join('');
+    cf.style.display='block';
+    document.getElementById('cartTotal').textContent='₹'+total;
+  }
+  // Sticky cart
+  const sc=document.getElementById('stickyCart');
+  if(count>0){
+    sc.classList.add('visible');
+    document.getElementById('stickyCount').textContent=count+' item'+(count>1?'s':'');
+    document.getElementById('stickyTotal').textContent='₹'+total;
+  }else{sc.classList.remove('visible');}
+}
+function openCart(){document.getElementById('cartOverlay').classList.add('open');document.getElementById('cartSidebar').classList.add('open');}
+function closeCart(){document.getElementById('cartOverlay').classList.remove('open');document.getElementById('cartSidebar').classList.remove('open');}
+function openCheckout(){closeCart();document.getElementById('checkoutModal').classList.add('open');switchTab('guest');}
+function closeCheckout(){document.getElementById('checkoutModal').classList.remove('open');}
+
+// ─── AUTH / TABS ──────────────────────────────────────────────────────────────
+function switchTab(tab){
+  ['login','signup','guest'].forEach(t=>{
+    document.getElementById(t+'Tab').style.display=t===tab?'block':'none';
+    document.querySelectorAll('.tab-btn').forEach((b,i)=>b.classList.toggle('active',['login','signup','guest'][i]===tab));
+  });
+}
+function doLogin(){showToast('✅ Logged in!','success');closeCheckout();setTimeout(openCheckout,300);}
+function doSignup(){showToast('✅ Account created!','success');closeCheckout();setTimeout(openCheckout,300);}
+function selectPayment(el,type){
+  document.querySelectorAll('.payment-opt').forEach(o=>o.classList.remove('selected'));
+  el.classList.add('selected');
+  selectedPayment=type;
+  document.getElementById('upiSection').style.display=type==='upi'?'block':'none';
+}
+
+// ─── ORDER ────────────────────────────────────────────────────────────────────
+function placeOrder(){
+  const name=document.getElementById('guestName').value.trim();
+  const phone=document.getElementById('guestPhone').value.trim();
+  const addr=document.getElementById('guestAddr').value.trim();
+  if(!name||!phone||!addr){showToast('⚠️ Please fill all required fields','info');return;}
+  const orderId='#'+Math.floor(1000+Math.random()*9000);
+  const total=getTotal();
+  // Build WhatsApp message
+  const items=cart.map(i=>`${i.qty}x ${i.name}`).join(', ');
+  const waMsg=`🥟 *New Order from Hyderabad Crispy Samosa*%0A%0A*Customer:* ${name}%0A*Phone:* ${phone}%0A*Address:* ${addr}%0A*Items:* ${items}%0A*Total:* ₹${total}%0A*Payment:* ${selectedPayment.toUpperCase()}%0A*Order ID:* ${orderId}%0A%0APlease confirm the order! 🙏`;
+  // Show success
+  document.getElementById('checkoutBody').innerHTML=`
+    <div class="order-success">
+      <div class="success-emoji">🎉</div>
+      <div class="success-title">Order Placed!</div>
+      <p style="color:var(--muted);font-size:15px">Your crispy samosas are being prepared!</p>
+      <div class="order-id">Order ID: ${orderId}</div>
+      <div class="track-steps">
+        <div class="track-step active"><div class="track-step-icon">✅</div><div class="track-step-info"><div class="track-step-title">Order Confirmed</div><div class="track-step-desc">Just now</div></div></div>
+        <div class="track-step"><div class="track-step-icon">👨‍🍳</div><div class="track-step-info"><div class="track-step-title">Preparing</div><div class="track-step-desc">~10 minutes</div></div></div>
+        <div class="track-step"><div class="track-step-icon">🚴</div><div class="track-step-info"><div class="track-step-title">Out for Delivery</div><div class="track-step-desc">~20 minutes</div></div></div>
+        <div class="track-step"><div class="track-step-icon">🏠</div><div class="track-step-info"><div class="track-step-title">Delivered</div><div class="track-step-desc">~30 minutes</div></div></div>
+      </div>
+      <a href="https://wa.me/919876543210?text=${waMsg}" target="_blank" style="display:block;background:#25D366;color:#fff;padding:14px;border-radius:50px;font-weight:700;text-decoration:none;margin-top:8px">💬 Send WhatsApp Confirmation</a>
+      <button onclick="closeCheckout()" style="width:100%;border:none;background:none;color:var(--muted);padding:12px;cursor:pointer;margin-top:8px">Close</button>
+    </div>
+  `;
+  cart=[];updateCartUI();
+  // Add to admin orders
+  orders.unshift({id:orderId,customer:name,items,total,status:'pending',address:addr});
+  renderAdminOrders();
+  addNotification(`🆕 New order ${orderId} - ${name} - ₹${total}`);
+}
+
+// ─── ADMIN ────────────────────────────────────────────────────────────────────
+function openAdmin(){document.getElementById('adminPanel').classList.add('open');}
+function closeAdmin(){document.getElementById('adminPanel').classList.remove('open');}
+function adminTab(tab){
+  document.querySelectorAll('.admin-tab').forEach((b,i)=>b.classList.toggle('active',['dashboard','orders','menu','delivery','reports'][i]===tab));
+  document.querySelectorAll('.admin-section').forEach(s=>s.classList.remove('active'));
+  document.getElementById('admin-'+tab).classList.add('active');
+}
+function renderAdminOrders(){
+  document.getElementById('adminOrderList').innerHTML=orders.map(o=>`
+    <div class="order-item">
+      <div class="order-item-header">
+        <span class="order-num">${o.id} — ${o.customer}</span>
+        <span class="order-status status-${o.status}">${o.status.charAt(0).toUpperCase()+o.status.slice(1)}</span>
+      </div>
+      <div style="font-size:13px;color:var(--muted)">📦 ${o.items} | 💰 ₹${o.total} | 📍 ${o.address}</div>
+      <div style="display:flex;gap:8px;margin-top:10px;flex-wrap:wrap">
+        ${o.status!=='delivered'?`<button class="assign-btn" onclick="assignDelivery('${o.id}')">Assign Delivery</button>`:''}
+        ${o.status==='pending'?`<button class="assign-btn" style="background:var(--green)" onclick="updateStatus('${o.id}','preparing')">Mark Preparing</button>`:''}
+        ${o.status==='preparing'?`<button class="assign-btn" style="background:var(--green)" onclick="updateStatus('${o.id}','delivered')">Mark Delivered</button>`:''}
+      </div>
+    </div>
+  `).join('');
+}
+function assignDelivery(id){showToast('🚴 Ravi Kumar assigned to '+id,'success');}
+function updateStatus(id,status){
+  const o=orders.find(o=>o.id===id);
+  if(o){o.status=status;renderAdminOrders();}
+  showToast('✅ Order '+id+' marked as '+status,'success');
+}
+function renderAdminMenu(){
+  document.getElementById('adminMenuList').innerHTML=menuItems.map(item=>`
+    <div style="background:var(--cream);border-radius:14px;padding:14px;border:1px solid rgba(255,107,0,0.15);display:flex;align-items:center;gap:12px;margin-bottom:10px">
+      <span style="font-size:32px">${item.emoji}</span>
+      <div style="flex:1">
+        <div style="font-weight:700">${item.name}</div>
+        <div style="font-size:13px;color:var(--muted)">${item.desc}</div>
+      </div>
+      <div style="display:flex;align-items:center;gap:8px">
+        <div style="font-family:'Baloo 2',sans-serif;font-size:20px;font-weight:800;color:var(--saffron)">₹${item.price}</div>
+        <button onclick="editPrice(${item.id})" style="background:rgba(255,107,0,0.1);border:1px solid var(--saffron);color:var(--saffron);border-radius:8px;padding:4px 10px;font-size:12px;cursor:pointer">Edit</button>
+        <button onclick="removeItem(${item.id})" style="background:rgba(229,57,53,0.1);border:1px solid var(--chili);color:var(--chili);border-radius:8px;padding:4px 10px;font-size:12px;cursor:pointer">Remove</button>
+      </div>
+    </div>
+  `).join('');
+}
+function editPrice(id){
+  const item=menuItems.find(i=>i.id===id);
+  const newPrice=prompt(`Edit price for ${item.name} (current: ₹${item.price}):`,item.price);
+  if(newPrice&&!isNaN(newPrice)){item.price=parseInt(newPrice);renderMenu();renderAdminMenu();showToast('✅ Price updated!','success');}
+}
+function removeItem(id){
+  if(!confirm('Remove this item from menu?'))return;
+  const idx=menuItems.findIndex(i=>i.id===id);
+  if(idx>-1){menuItems.splice(idx,1);renderMenu();renderAdminMenu();showToast('🗑️ Item removed','info');}
+}
+function addMenuItem(){
+  const name=document.getElementById('newItemName').value.trim();
+  const price=parseInt(document.getElementById('newItemPrice').value);
+  const desc=document.getElementById('newItemDesc').value.trim();
+  if(!name||!price){showToast('⚠️ Please fill name and price','info');return;}
+  const newId=Math.max(...menuItems.map(i=>i.id))+1;
+  menuItems.push({id:newId,name,desc:desc||'Fresh & Crispy',price,emoji:'🥟',badge:'New',badgeType:''});
+  renderMenu();renderAdminMenu();
+  document.getElementById('newItemName').value='';
+  document.getElementById('newItemPrice').value='';
+  document.getElementById('newItemDesc').value='';
+  showToast('✅ '+name+' added to menu!','success');
+}
+function renderTopSelling(){
+  const data=[{name:'Aloo Samosa',count:156,pct:85},{name:'Paneer Samosa',count:98,pct:64},{name:'Cheese Burst',count:87,pct:55},{name:'Chicken Samosa',count:72,pct:42}];
+  document.getElementById('topSelling').innerHTML=data.map(d=>`
+    <div style="margin-bottom:12px">
+      <div style="display:flex;justify-content:space-between;font-size:14px;margin-bottom:4px"><span style="font-weight:600">${d.name}</span><span style="color:var(--saffron);font-weight:700">${d.count} sold</span></div>
+      <div style="background:rgba(255,107,0,0.1);border-radius:50px;height:8px"><div style="background:linear-gradient(90deg,var(--saffron),var(--chili));height:8px;border-radius:50px;width:${d.pct}%"></div></div>
+    </div>
+  `).join('');
+}
+function addNotification(msg){
+  const list=document.getElementById('notifList');
+  const div=document.createElement('div');
+  div.style.cssText='padding:8px 0;border-bottom:1px solid rgba(255,107,0,0.1);font-size:14px;color:var(--saffron)';
+  div.textContent=msg;
+  list.insertBefore(div,list.firstChild);
+  document.getElementById('adTotalOrders').textContent=parseInt(document.getElementById('adTotalOrders').textContent)+1;
+  document.getElementById('adPending').textContent=parseInt(document.getElementById('adPending').textContent)+1;
+}
+
+// ─── DELIVERY BOY ─────────────────────────────────────────────────────────────
+function openDeliveryBoy(){document.getElementById('dbPanel').classList.add('open');}
+function closeDeliveryBoy(){document.getElementById('dbPanel').classList.remove('open');}
+function acceptDelivery(){showToast('✅ Order accepted! Navigate to customer','success');closeDeliveryBoy();}
+function rejectDelivery(){showToast('❌ Order rejected','info');closeDeliveryBoy();}
+
+// ─── WHATSAPP ─────────────────────────────────────────────────────────────────
+function openWhatsApp(){
+  const msg=cart.length>0
+    ? `Hello! I want to order: ${cart.map(i=>`${i.qty}x ${i.name}`).join(', ')}. Total: ₹${getTotal()}`
+    : `Hello! I want to order samosas from Hyderabad Crispy Samosa. Please share the menu!`;
+  window.open(`https://wa.me/919876543210?text=${encodeURIComponent(msg)}`,'_blank');
+}
+
+// ─── UTILS ───────────────────────────────────────────────────────────────────
+function scrollToMenu(){document.getElementById('menu').scrollIntoView({behavior:'smooth'});}
+function showToast(msg,type='info'){
+  const t=document.getElementById('toast');
+  t.textContent=msg;t.className='toast '+type+' show';
+  setTimeout(()=>t.className='toast',3000);
+}
+updateCartUI();
+</script>
+</body>
+</html>
